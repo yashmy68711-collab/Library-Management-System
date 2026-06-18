@@ -6,9 +6,10 @@ class Library:
         if len(self.books) == 0:
             print("No books available")
         else:
-            print("\nAvailable Books:")
-            for book in self.books:
-                print("-", book)
+          print("\nAvailable Books:")
+            for i, book in enumerate(self.books, 1):
+                print(f"{i}. {book}")
+            print("Total Books:", len(self.books))
 
     def borrow_book(self, book_name):
         if book_name in self.books:
