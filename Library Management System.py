@@ -1,6 +1,7 @@
 class Library:
     def __init__(self):
         self.books = ["Python", "AI Basics", "Robotics", "Math"]
+        self.history = []
 
     def view_books(self):
         if len(self.books) == 0:
@@ -12,11 +13,15 @@ class Library:
             print("Total Books:", len(self.books))
 
     def borrow_book(self, book_name):
-        if book_name in self.books:
-            self.books.remove(book_name)
-            print(f"You borrowed '{book_name}'")
-        else:
-            print("Book not available")
+        found = False
+
+        for book in self.books:
+            if book.lower() == book_name.lower():
+                self.books.remove(book)
+                self.history.append(f"Borrowed: {book}")
+                print(f"You borrowed '{book}'")
+                found = True
+                break
 
     def return_book(self, book_name):
         self.books.append(book_name)
