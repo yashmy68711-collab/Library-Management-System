@@ -43,19 +43,3 @@ python-library-management-system/
 │── library_management.py
 │── README.md
 ```
-
----
-
-## 🔮 Future Improvements
-
-* Multiple users
-* Book categories
-* Fine calculation for late return
-* Save library data to file
-* GUI version
-
----
-
-## 👨‍💻 Author
-
-Made with Python for learning and practice.
