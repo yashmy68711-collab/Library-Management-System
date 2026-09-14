@@ -44,4 +44,24 @@ while True:
 
     choice = input("Enter choice: ")
 
-   
+    if choice == "1":
+        library.view_books()
+
+    elif choice == "2":
+        book = input("Enter book name: ")
+        library.borrow_book(book)
+
+    elif choice == "3":
+        book = input("Enter book name: ")
+        library.return_book(book)
+
+    elif choice == "4":
+        book = input("Enter new book name: ")
+        library.add_book(book)
+
+    elif choice == "5":
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid choice")
